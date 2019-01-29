@@ -1,0 +1,42 @@
+a { /* 선택자(Selector) */
+  color:black; /* 선언,효과(Declaration)
+  color는 속성(Property), black은 속성 값(Value)*/
+  text-decoration: none;
+}
+body {
+  margin:0;
+}
+h1 {
+  font-size: 39px;
+  text-align: center;
+  border-bottom:1px solid gray;
+  margin:0;
+  padding:20px;
+}
+#grid {
+  display:grid;
+  grid-template-columns: 150px 1fr
+}
+#grid ol {
+  border-right:1px solid gray;
+  margin:0;
+  margin-left:20px;
+  padding:20px;
+}
+#article {
+  padding-left: 35px;
+}
+/* 우선순위: id > class > tag(element). 마지막에 나온게 우선 적용
+id 하나는 한 번만 사용 가능(유일무이) */
+
+@media(max-width:800px) {
+  #grid {
+    display:block;
+  }
+  #grid ol {
+    border-right:none;
+  }
+  h1 {
+    border-bottom:none;
+  }
+}
